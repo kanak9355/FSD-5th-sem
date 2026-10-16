@@ -1,0 +1,1278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --primary: #111827;
+    --secondary: #4b5563;
+    --border: #e5e7eb;
+    --background: #f5f6f8;
+    --white: #ffffff;
+    --light: #f9fafb;
+    --green: #15803d;
+    --red: #dc2626;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--background);
+
+    color: #111827;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 250px;
+
+    height: 100vh;
+
+    background: #111827;
+
+    color: white;
+
+    padding: 28px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    z-index: 10;
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 10px 35px;
+
+    border-bottom: 1px solid #374151;
+}
+
+
+.logo-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 9px;
+
+    background: white;
+
+    color: #111827;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 21px;
+
+    font-weight: bold;
+}
+
+
+.logo h2 {
+
+    font-size: 19px;
+
+    margin-bottom: 3px;
+}
+
+
+.logo span {
+
+    font-size: 11px;
+
+    color: #9ca3af;
+}
+
+
+nav {
+
+    margin-top: 30px;
+}
+
+
+nav a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    text-decoration: none;
+
+    color: #9ca3af;
+
+    padding: 13px 15px;
+
+    border-radius: 7px;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+
+nav a span {
+
+    font-size: 18px;
+}
+
+
+nav a:hover,
+nav a.active {
+
+    background: #374151;
+
+    color: white;
+}
+
+
+.sidebar-bottom {
+
+    margin-top: auto;
+}
+
+
+.grade-info {
+
+    background: #1f2937;
+
+    border-radius: 9px;
+
+    padding: 17px;
+}
+
+
+.grade-info h4 {
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+}
+
+
+.grade-info div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 5px 0;
+
+    font-size: 11px;
+
+    color: #9ca3af;
+}
+
+
+.grade-info b {
+
+    color: white;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+
+    margin-left: 250px;
+
+    min-height: 100vh;
+
+    padding: 35px 45px 60px;
+}
+
+
+/* =========================================
+   TOPBAR
+========================================= */
+
+.topbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 30px;
+}
+
+
+.small-title {
+
+    color: #6b7280;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 7px;
+}
+
+
+.topbar h1 {
+
+    font-size: 32px;
+
+    margin-bottom: 7px;
+}
+
+
+.subtitle {
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+.date-box {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    padding: 11px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    text-align: right;
+}
+
+
+.date-box span {
+
+    font-size: 11px;
+
+    color: #9ca3af;
+}
+
+
+.date-box strong {
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+.stat-card {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    padding: 21px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    transition: 0.2s;
+}
+
+
+.stat-card:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 20px rgba(0,0,0,0.06);
+}
+
+
+.stat-label {
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+
+.stat-left h2 {
+
+    font-size: 27px;
+
+    margin-bottom: 5px;
+}
+
+
+.stat-description {
+
+    font-size: 10px;
+
+    color: #9ca3af;
+}
+
+
+.stat-icon {
+
+    width: 43px;
+
+    height: 43px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+
+.students-icon {
+
+    background: #eef2ff;
+}
+
+
+.marks-icon {
+
+    background: #ecfdf5;
+}
+
+
+.highest-icon {
+
+    background: #fff7ed;
+}
+
+
+.passing-icon {
+
+    background: #f0fdf4;
+}
+
+
+/* =========================================
+   CONTENT CARD
+========================================= */
+
+.content-card {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    overflow: hidden;
+}
+
+
+.section-header {
+
+    padding: 23px 27px;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.section-header h2,
+.records-header h2 {
+
+    font-size: 19px;
+
+    margin-bottom: 5px;
+}
+
+
+.section-header p,
+.records-header p {
+
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+
+.required-text {
+
+    font-size: 11px;
+
+    color: #9ca3af;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+#studentForm {
+
+    padding: 27px;
+}
+
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    column-gap: 45px;
+
+    row-gap: 22px;
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.form-group label {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+    color: #374151;
+}
+
+
+.form-group label span {
+
+    color: #dc2626;
+}
+
+
+.form-group input,
+.form-group select {
+
+    height: 46px;
+
+    width: 100%;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    padding: 0 13px;
+
+    font-size: 13px;
+
+    color: #111827;
+
+    background: white;
+
+    transition: 0.2s;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+
+    border-color: #111827;
+
+    box-shadow:
+        0 0 0 3px rgba(17,24,39,0.06);
+}
+
+
+.marks-input {
+
+    position: relative;
+}
+
+
+.marks-input input {
+
+    padding-right: 55px;
+}
+
+
+.marks-input span {
+
+    position: absolute;
+
+    right: 14px;
+
+    top: 15px;
+
+    font-size: 12px;
+
+    color: #9ca3af;
+}
+
+
+.form-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 27px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid #f0f0f0;
+}
+
+
+.clear-btn {
+
+    height: 43px;
+
+    padding: 0 19px;
+
+    border: 1px solid #d1d5db;
+
+    background: white;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    color: #374151;
+}
+
+
+.clear-btn:hover {
+
+    background: #f3f4f6;
+}
+
+
+.submit-btn {
+
+    height: 43px;
+
+    padding: 0 22px;
+
+    border: none;
+
+    background: #111827;
+
+    color: white;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+
+.submit-btn:hover {
+
+    background: #000;
+}
+
+
+.submit-btn span {
+
+    margin-left: 8px;
+}
+
+
+/* =========================================
+   RECORDS HEADER
+========================================= */
+
+.records-header {
+
+    padding: 23px 27px;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.search-box {
+
+    width: 320px;
+
+    height: 42px;
+
+    position: relative;
+}
+
+
+.search-box span {
+
+    position: absolute;
+
+    left: 13px;
+
+    top: 10px;
+
+    font-size: 19px;
+
+    color: #9ca3af;
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    padding: 0 12px 0 40px;
+
+    font-size: 12px;
+}
+
+
+.search-box input:focus {
+
+    border-color: #111827;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+}
+
+
+thead {
+
+    background: #f9fafb;
+}
+
+
+th {
+
+    padding: 14px 20px;
+
+    text-align: left;
+
+    font-size: 10px;
+
+    letter-spacing: 0.4px;
+
+    color: #6b7280;
+
+    font-weight: 700;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+td {
+
+    padding: 16px 20px;
+
+    font-size: 13px;
+
+    border-bottom: 1px solid #f0f0f0;
+
+    color: #374151;
+}
+
+
+tbody tr:hover {
+
+    background: #fafafa;
+}
+
+
+.student-name {
+
+    font-weight: 600;
+
+    color: #111827;
+}
+
+
+.roll-number {
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   GRADE
+========================================= */
+
+.grade {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 36px;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.grade-a-plus {
+
+    background: #dcfce7;
+
+    color: #15803d;
+}
+
+
+.grade-a {
+
+    background: #dbeafe;
+
+    color: #1d4ed8;
+}
+
+
+.grade-b-plus {
+
+    background: #fef3c7;
+
+    color: #a16207;
+}
+
+
+.grade-b {
+
+    background: #ffedd5;
+
+    color: #c2410c;
+}
+
+
+.grade-c {
+
+    background: #f3e8ff;
+
+    color: #7e22ce;
+}
+
+
+.grade-f {
+
+    background: #fee2e2;
+
+    color: #b91c1c;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.actions {
+
+    display: flex;
+
+    gap: 7px;
+}
+
+
+.action-btn {
+
+    border: 1px solid #d1d5db;
+
+    background: white;
+
+    border-radius: 5px;
+
+    padding: 7px 11px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+
+.edit-action:hover {
+
+    background: #f3f4f6;
+}
+
+
+.delete-action {
+
+    color: #dc2626;
+
+    border-color: #fecaca;
+}
+
+
+.delete-action:hover {
+
+    background: #fef2f2;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-state {
+
+    padding: 55px 20px;
+
+    text-align: center;
+
+    display: none;
+}
+
+
+.empty-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    margin: auto;
+
+    background: #f3f4f6;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 24px;
+
+    color: #9ca3af;
+
+    margin-bottom: 14px;
+}
+
+
+.empty-state h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 6px;
+}
+
+
+.empty-state p {
+
+    color: #9ca3af;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(17,24,39,0.55);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 100;
+}
+
+
+.modal.show {
+
+    display: flex;
+}
+
+
+.modal-box {
+
+    width: 500px;
+
+    max-width: 92%;
+
+    background: white;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.2);
+}
+
+
+.modal-header {
+
+    padding: 22px 25px;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+}
+
+
+.modal-header h2 {
+
+    font-size: 19px;
+
+    margin-bottom: 5px;
+}
+
+
+.modal-header p {
+
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+
+.close-btn {
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 27px;
+
+    cursor: pointer;
+
+    color: #6b7280;
+}
+
+
+.modal-form {
+
+    padding: 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+.modal-actions {
+
+    padding: 18px 25px;
+
+    border-top: 1px solid var(--border);
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .stats-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .main-content {
+
+        padding: 30px;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .sidebar {
+
+        width: 70px;
+
+        padding: 20px 10px;
+    }
+
+
+    .logo {
+
+        justify-content: center;
+
+        padding: 0 0 25px;
+    }
+
+
+    .logo > div:last-child,
+    nav a:not(.active)::after,
+    nav a {
+        font-size: 0;
+    }
+
+
+    .logo-icon {
+
+        width: 40px;
+
+        height: 40px;
+    }
+
+
+    nav a {
+
+        justify-content: center;
+
+        padding: 13px;
+    }
+
+
+    nav a span {
+
+        font-size: 18px;
+    }
+
+
+    .grade-info {
+
+        display: none;
+    }
+
+
+    .main-content {
+
+        margin-left: 70px;
+
+        padding: 25px;
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .records-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+
+    .search-box {
+
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .main-content {
+
+        margin-left: 0;
+
+        padding: 18px;
+    }
+
+
+    .sidebar {
+
+        display: none;
+    }
+
+
+    .topbar {
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+
+    .topbar h1 {
+
+        font-size: 26px;
+    }
+
+
+    .date-box {
+
+        text-align: left;
+    }
+
+
+    .stats-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .section-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+
+    #studentForm {
+
+        padding: 20px;
+    }
+
+
+    .form-actions {
+
+        flex-direction: column-reverse;
+    }
+
+
+    .form-actions button {
+
+        width: 100%;
+    }
+
+
+    .modal-form {
+
+        grid-template-columns: 1fr;
+    }
+
+}
